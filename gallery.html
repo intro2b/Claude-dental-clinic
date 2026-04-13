@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | BrightSmile Dental Care, New Delhi</title>
+    <meta name="description"
+        content="View before & after transformations, clinic photos, and team photos at BrightSmile Dental Care, Rajouri Garden, New Delhi." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+        .gallery-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-panel[data-panel]:not([style*="grid"]) {
+            display: none;
+        }
+
+        .placeholder-card {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .placeholder-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .placeholder-card .emoji {
+            font-size: 3rem;
+        }
+
+        .placeholder-card .label {
+            font-weight: 600;
+            font-size: 0.88rem;
+            text-align: center;
+            padding: 0 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🦷</div>
+                    <div class="logo-text"><span class="name">BrightSmile</span><span class="tagline">Dental Care</span>
+                    </div>
+                </a>
+                <nav class="nav" id="mainNav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="testimonials.html" class="nav-link">Testimonials</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="appointment.html" class="nav-cta">📅 Book Now</a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Gallery</span></div>
+            <h1>Our Gallery</h1>
+            <p>See real transformations, our modern clinic spaces, and the team behind your beautiful smile.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <!-- Tabs -->
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-tab="before-after">✨ Before &amp; After</button>
+                <button class="gallery-tab" data-tab="clinic">🏥 Clinic Photos</button>
+                <button class="gallery-tab" data-tab="team">👨‍⚕️ Our Team</button>
+            </div>
+
+            <!-- Before & After Panel -->
+            <div class="gallery-panel" data-panel="before-after" style="display:grid;">
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#fff9c4,#fff3e0);">
+                        <span style="font-size:2.5rem;">✨</span>
+                        <p style="font-weight:700;color:#e65100;font-size:.9rem;text-align:center;padding:0 14px;">Teeth
+                            Whitening<br><span style="font-weight:400;color:var(--text-muted);font-size:.8rem;">3 shades
+                                whiter in 1 session</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Laser Whitening Result</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">
+                        <span style="font-size:2.5rem;">😁</span>
+                        <p style="font-weight:700;color:#2e7d32;font-size:.9rem;text-align:center;padding:0 14px;">
+                            Invisalign Transformation<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">12 months treatment
+                                result</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Invisalign Before &amp; After</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">
+                        <span style="font-size:2.5rem;">🦷</span>
+                        <p style="font-weight:700;color:#1565c0;font-size:.9rem;text-align:center;padding:0 14px;">
+                            Dental Implant<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Natural-looking
+                                permanent replacement</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Implant Case Study</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">
+                        <span style="font-size:2.5rem;">👑</span>
+                        <p style="font-weight:700;color:#880e4f;font-size:.9rem;text-align:center;padding:0 14px;">
+                            Zirconia Crown<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Strength meets
+                                aesthetics</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Crown Placement Result</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">
+                        <span style="font-size:2.5rem;">😄</span>
+                        <p style="font-weight:700;color:#6a1b9a;font-size:.9rem;text-align:center;padding:0 14px;">Metal
+                            Braces Result<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Perfect alignment in 18
+                                months</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Braces Transformation</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">
+                        <span style="font-size:2.5rem;">🔬</span>
+                        <p style="font-weight:700;color:#e65100;font-size:.9rem;text-align:center;padding:0 14px;">
+                            Composite Veneer<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Smile makeover in one
+                                visit</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Veneer Before &amp; After</span></div>
+                </div>
+
+            </div>
+
+            <!-- Clinic Photos Panel -->
+            <div class="gallery-panel" data-panel="clinic" style="display:none;">
+
+                <div class="gallery-item">
+                    <img src="assets/images/treatment-room.png" alt="BrightSmile treatment room" />
+                    <div class="gallery-overlay"><span class="gallery-label">Treatment Room</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#e0f2f1,#b2dfdb);">
+                        <span style="font-size:2.5rem;">🛋️</span>
+                        <p style="font-weight:700;color:#004d40;font-size:.9rem;">Waiting Lounge<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Comfortable &amp;
+                                welcoming</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Waiting Lounge</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">
+                        <span style="font-size:2.5rem;">🏥</span>
+                        <p style="font-weight:700;color:#283593;font-size:.9rem;">Reception Area<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Modern &amp; friendly
+                                front desk</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Reception Area</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7);">
+                        <span style="font-size:2.5rem;">🧪</span>
+                        <p style="font-weight:700;color:#1b5e20;font-size:.9rem;">Sterilization Unit<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">ISO-certified hygiene
+                                standards</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Sterilization Unit</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">
+                        <span style="font-size:2.5rem;">💻</span>
+                        <p style="font-weight:700;color:#bf360c;font-size:.9rem;">Digital X-Ray Station<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Low-radiation digital
+                                imaging</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">X-Ray Station</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#fce4ec,#f48fb1);">
+                        <span style="font-size:2.5rem;">🌿</span>
+                        <p style="font-weight:700;color:#880e4f;font-size:.9rem;">Kids Corner<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Fun &amp; friendly area
+                                for children</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Pediatric Corner</span></div>
+                </div>
+
+            </div>
+
+            <!-- Team Photos Panel -->
+            <div class="gallery-panel" data-panel="team" style="display:none;">
+
+                <div class="gallery-item">
+                    <img src="assets/images/doctor-anil.png" alt="Dr. Anil Mehta" />
+                    <div class="gallery-overlay"><span class="gallery-label">Dr. Anil Mehta — Founder</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/doctor-sneha.png" alt="Dr. Sneha Kapoor" />
+                    <div class="gallery-overlay"><span class="gallery-label">Dr. Sneha Kapoor — Endodontist</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/doctor-rohan.png" alt="Dr. Rohan Verma" />
+                    <div class="gallery-overlay"><span class="gallery-label">Dr. Rohan Verma — General Dentist</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder"
+                        style="background:linear-gradient(135deg,var(--teal-light),var(--teal-mid));">
+                        <span style="font-size:2.5rem;">👥</span>
+                        <p style="font-weight:700;color:var(--teal-dark);font-size:.9rem;">Team BrightSmile<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Our complete dental
+                                team</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Full Team Photo</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#ede7f6,#d1c4e9);">
+                        <span style="font-size:2.5rem;">🤝</span>
+                        <p style="font-weight:700;color:#4527a0;font-size:.9rem;">Support Staff<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Our friendly front desk
+                                &amp; assistants</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Support Team</span></div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background:linear-gradient(135deg,#ffebee,#ffcdd2);">
+                        <span style="font-size:2.5rem;">🎓</span>
+                        <p style="font-weight:700;color:#b71c1c;font-size:.9rem;">Training Day<br><span
+                                style="font-weight:400;color:var(--text-muted);font-size:.8rem;">Continuous education
+                                &amp; development</span></p>
+                    </div>
+                    <div class="gallery-overlay"><span class="gallery-label">Team Training</span></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Like What You See?</h2>
+            <p>Come visit us and experience the BrightSmile difference in person.</p>
+            <div class="cta-btns">
+                <a href="appointment.html" class="btn btn-white">📅 Book a Visit</a>
+                <a href="contact.html" class="btn btn-outline" style="border-color:white;color:white;">📍 Get
+                    Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                            <div class="logo-icon">🦷</div>
+                            <div>
+                                <div class="name">BrightSmile Dental Care</div>
+                                <div class="tagline">Your Smile, Our Priority</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Providing trusted, painless, and affordable dental care to families across
+                        Delhi since 2009.</p>
+                    <div class="social-links"><a href="https://instagram.com/brightsmiledelhi" target="_blank"
+                            class="social-link instagram">📷</a><a
+                            href="https://facebook.com/BrightSmileDentalCareDelhi" target="_blank"
+                            class="social-link facebook">📘</a><a href="https://wa.me/919876543210" target="_blank"
+                            class="social-link">💬</a></div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a
+                            href="services.html">Services</a><a href="appointment.html">Book Appointment</a><a
+                            href="testimonials.html">Testimonials</a><a href="gallery.html">Gallery</a><a
+                            href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <div class="footer-links"><a href="services.html">Teeth Whitening</a><a href="services.html">Braces
+                            &amp; Aligners</a><a href="services.html">Root Canal</a><a href="services.html">Dental
+                            Implants</a><a href="services.html">Crowns &amp; Bridges</a><a
+                            href="services.html">Pediatric Dentistry</a><a href="services.html">Emergency Care</a></div>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item"><span class="fci">📍</span><span>42, Rajouri Garden Main Market,
+                            New Delhi – 110027</span></div>
+                    <div class="footer-contact-item"><span class="fci">📞</span><a href="tel:+919876543210"
+                            style="color:rgba(255,255,255,0.65);">+91 98765 43210</a></div>
+                    <div class="footer-contact-item"><span class="fci">✉️</span><a
+                            href="mailto:hello@brightsmiledentalcare.in"
+                            style="color:rgba(255,255,255,0.65);">hello@brightsmiledentalcare.in</a></div>
+                    <div class="footer-contact-item"><span class="fci">🕐</span><span>Mon–Sat: 9AM–8PM | Sun:
+                            10AM–2PM</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2025 BrightSmile Dental Care. All rights reserved.</span>
+                <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank"
+        class="whatsapp-float" title="Chat on WhatsApp">
+        <div class="whatsapp-pulse"></div>
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.532 5.854L0 24l6.335-1.508A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.67-.5-5.21-1.378l-.374-.222-3.76.895.943-3.663-.244-.385A9.938 9.938 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+        </svg>
+    </a>
+    <button class="back-to-top" id="backToTop">↑</button>
+    <script src="js/main.js"></script>
+    <!-- Gallery Tab Init -->
+    <script>
+        // Show first tab's panel on load
+        document.querySelectorAll('.gallery-panel').forEach((panel, i) => {
+            panel.style.display = i === 0 ? 'grid' : 'none';
+        });
+    </script>
+</body>
+
+</html>
